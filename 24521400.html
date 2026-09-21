@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web giới thiệu bản thân - Pastel Earthy</title>
+
+    <style>
+        /* CSS Reset & Font chữ chung */
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FDFBF7; /* Nền trang màu kem nhạt */
+            color: #4A3B32; /* Màu chữ nâu đậm chủ đạo */
+            line-height: 1.6;
+            padding-bottom: 20px;
+        }
+
+        /* Container chính định dạng dạng Card Form */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(74, 59, 50, 0.08);
+            overflow: hidden;
+            border: 1px solid #E8D8CE;
+        }
+
+        /* 1. Thanh Nav */
+        nav {
+            background-color: #D0B8AC;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #4A3B32;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #8C6D58;
+        }
+
+        /* 2. Định dạng Tiêu đề h1, h2, h3, h4 */
+        h1, h2, h3, h4 {
+            font-size: 24px;
+            -webkit-text-stroke: 1px #4A3B32; /* Viền chữ nâu đậm theo yêu cầu */
+            margin-bottom: 12px;
+            margin-top: 15px;
+        }
+
+        /* Phối màu chữ tiêu đề theo gam Nâu Pastel */
+        .color-h1 { color: #6B4E3D; }
+        .color-h2 { color: #8C6D58; }
+        .color-h3 { color: #A37B64; }
+
+        /* 3. Layout Khối 1: Giới thiệu bản thân */
+        .section-intro {
+            background-color: #F5EBE6; /* Nền nâu kem nhạt */
+            padding: 30px;
+            border-bottom: 2px dashed #D0B8AC;
+        }
+
+        .avatar {
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 50%; /* Bo tròn ảnh đại diện cho đẹp mắt */
+            border: 4px solid #D0B8AC;
+            object-fit: cover;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Bảng mục tiêu */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table, th, td {
+            border: 1px solid #D0B8AC;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #E8D8CE;
+            color: #4A3B32;
+        }
+
+        /* 4. Layout Khối 2: Form Gửi thông tin */
+        .section-contact {
+            background-color: #E8D8CE; /* Nền nâu cacao nhạt */
+            background-image: url('bg-pattern.jpg'); /* Đặt ảnh nền hạt / hoạ tiết nếu có */
+            background-repeat: repeat;
+            padding: 30px;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #D0B8AC;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #4A3B32;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #D0B8AC;
+            border-radius: 6px;
+            background-color: #FDFBF7;
+            color: #4A3B32;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #8C6D58;
+            box-shadow: 0 0 5px rgba(140, 109, 88, 0.3);
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #8C6D58;
+            color: #ffffff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #6B4E3D;
+        }
+
+        /* 5. Footer */
+        footer {
+            background-color: #D0B8AC;
+            color: #4A3B32;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Thanh Nav -->
+        <nav>
+            <a href="#gioi-thieu">Giới thiệu bản thân</a> | 
+            <a href="#lien-he">Gửi thông tin & giao lưu</a>
+        </nav>
+
+        <!-- Khối 1: Giới thiệu bản thân -->
+        <div id="gioi-thieu" class="section-intro">
+            <img src="avatar.jpg" alt="Ảnh đại diện" width="140" height="140" class="avatar">
+            
+            <h1 class="color-h1">Giới thiệu bản thân</h1>
+            
+            <h2 class="color-h2">Thông tin cơ bản</h2>
+            <ul>
+                <li><strong>Họ và tên:</strong> Trần Nhụy Tam Tử Phục</li>
+                <li><strong>Ngày sinh:</strong> 10/06/2006</li>
+            </ul>
+
+            <h2 class="color-h2">Sở thích</h2>
+            
+            <h3 class="color-h3">Món ăn</h3>
+            <ul>
+                <li>Bún bò</li>
+                <li>Pizza</li>
+            </ul>
+
+            <h3 class="color-h3">Giải trí</h3>
+            
+            <h4>Trò chơi</h4>
+            <ul>
+                <li>PUBG</li>
+                <li>Bóng rổ</li>
+            </ul>
+
+            <h4>Bài hát yêu thích</h4>
+            <ol>
+                <li>Rực Rỡ</li>
+                <li>Thanh Xuân</li>
+            </ol>
+
+            <h2 class="color-h2">Mục tiêu của bản thân</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mục tiêu</th>
+                        <th>Thời hạn</th>
+                        <th>Hoàn thành</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trung bình điểm môn web đạt 8.0</td>
+                        <td>30/06/2026</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Đạt chứng chỉ ngoại ngữ đủ chuẩn tốt nghiệp</td>
+                        <td>15/12/2026</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Chọn được công ty với vị trí backend developer</td>
+                        <td>01/06/2027</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Khối 2: Gửi thông tin và giao lưu cùng tôi -->
+        <div id="lien-he" class="section-contact">
+            <h1 class="color-h1" style="text-align: center; margin-bottom: 20px;">Gửi thông tin và giao lưu cùng tôi</h1>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tin nhắn:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Viết lời nhắn tại đây..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" id="nam" name="gender" value="nam"> Nam</label>
+                        <label><input type="radio" id="nu" name="gender" value="nu"> Nữ</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Sở thích:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="nghenhac" name="hobby" value="nghenhac"> Nghe nhạc</label>
+                        <label><input type="checkbox" id="boiloi" name="hobby" value="boiloi"> Bơi lội</label>
+                        <label><input type="checkbox" id="bien" name="hobby" value="bien"> Biển</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="major">Ngành:</label>
+                    <select id="major" name="major">
+                        <option value="khmt">Khoa học Máy tính</option>
+                        <option value="httth">Hệ thống Thông tin</option>
+                        <option value="cntt">Công nghệ Thông tin</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Gửi thông tin</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>@2026 MSSV HoTen</p>
+        </footer>
+    </div>
+
+</body>
+</html>
